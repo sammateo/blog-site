@@ -2,19 +2,25 @@
 	width: 90%;
 	margin-left: auto;
 	margin-right: auto;
-	margin-top: 50px;
+	margin-bottom: 50px;
 	display: grid;
-	width: 600px;
-	height: 300px;
+	width: 60%;
 	padding: 10px;
 }
 
 .title {
-	font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
 	font-weight: bold;
-	font-size: 3rem;
-	padding: 10px;
+	font-size: 2em;
+	/* padding: 10px; */
 	text-align: left;
+	width: fit-content;
+}
+.title a {
+	width: inherit;
+}
+.title:hover {
+	cursor: pointer;
+	text-decoration: underline;
 }
 
 .body {
@@ -22,7 +28,23 @@
 	text-align: left;
 }
 
+.body pre {
+	white-space: pre-line;
+}
+
 .date {
+	display: grid;
+	grid-template-columns: 1fr 1fr;
 	margin-top: 30px;
-	border-top: 2px solid black;
+	border-top: 3px solid black;
+}
+
+.author {
+	text-align: right;
+	margin-right: 30px;
+}
+@media (max-width: 768px) {
+	.container {
+		width: 90%;
+	}
 }

@@ -1,0 +1,9 @@
+.container {
+	display: grid;
+	grid-template-columns: auto;
+	grid-template-rows: auto 100px;
+}
+
+.container Button {
+	margin-left: 40px;
+}

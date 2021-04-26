@@ -1,25 +1,139 @@
 .container {
-	width: 100%;
+	width: 100vw;
 	margin-left: auto;
 	margin-right: auto;
-	border-bottom: 3px solid black;
+	margin-bottom: 20px;
 	display: grid;
 	place-items: center;
 	background-image: url(/nat.jpg);
-	background-size: contain;
+	background-size: cover;
 	padding: 70px;
+	color: white;
+	position: relative;
 }
 
 .pfp {
 	display: block;
-	width: 90px;
-	border-radius: 50px;
+	width: 120px;
+
+	border-radius: 60px;
 }
 .title {
 	display: block;
-	width: 500px;
+	width: 100%;
 	text-align: center;
 	margin-left: auto;
 	margin-right: auto;
 	color: white;
+}
+
+.contact {
+	position: absolute;
+	bottom: 30px;
+	left: 30px;
+}
+
+.burger,
+.exit {
+	position: absolute;
+	top: 20px;
+	right: 40px;
+	/* display: grid; */
+	background-color: none;
+	height: 20px;
+	width: 30px;
+	transition: 3s ease-in-out;
+	/* display: none; */
+}
+
+.burger:hover,
+.exit:hover,
+.exitlabel:hover {
+	cursor: pointer;
+}
+
+/* .burger:hover {
+	height: 21px;
+} */
+.burger::before,
+.exit::before {
+	content: "";
+	display: block;
+	padding: 0;
+	margin: 0;
+	transform: translateY(-5px);
+	box-sizing: border-box;
+	background-color: white;
+	border-radius: 20px;
+	height: 30px;
+	width: 30px;
+}
+
+label.burger div {
+	background-color: black;
+	height: 5px;
+}
+
+.menu {
+	position: absolute;
+	transform: translateX(120%);
+	height: 100%;
+	width: 100%;
+	background-color: rgba(0, 0, 0, 0.9);
+	transition: 1s ease-in-out;
+}
+
+.exitlabel {
+	position: absolute;
+	top: 20px;
+	right: 40px;
+	color: white;
+	width: 80px;
+	/* background-color: black; */
+}
+
+.menuitems {
+	width: 50%;
+	padding-top: 50px;
+	margin-left: auto;
+	margin-right: auto;
+	text-align: center;
+	display: grid;
+	grid-gap: 50px;
+	place-items: center;
+}
+
+.menuitems p {
+	margin-left: auto;
+	margin-right: auto;
+	width: 40%;
+	padding: 5px;
+	transition: 1s ease-in-out;
+	border-bottom: 2px solid rgba(0, 0, 0, 0);
+	text-align: center;
+	transform-origin: center;
+}
+.menuitems p:hover {
+	cursor: pointer;
+	/* color: black; */
+	transition: 1s ease-in-out;
+	transform-origin: center;
+
+	border-bottom: 2px solid white;
+	/* background-color: white; */
+	/* width: 40%; */
+}
+
+@media screen and (max-width: 600px) {
+	.title {
+		font-size: 22px;
+	}
+
+	.burger,
+	.exit {
+		right: 20px;
+	}
+	.exitlabel {
+		right: 20px;
+	}
 }
