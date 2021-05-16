@@ -1,8 +1,13 @@
 import styles from "../styles/Post.module.css";
 import Link from "next/link";
-function Post({ title, body, date, link }) {
+import { useState } from "react";
+function Post({ title, body, date, link, loading }) {
 	return (
 		<div className={styles.container}>
+			{loading ? (
+				<img src="/loading.png" className={styles.loading}></img>
+			) : null}
+
 			<div className={styles.title}>
 				{/* <Link href={link}>
 					<a>
