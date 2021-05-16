@@ -6,13 +6,18 @@
 	display: grid;
 	width: 60%;
 	padding: 10px;
+	position: relative;
 }
 
 .loading {
 	width: 50px;
 	animation: load 1s infinite;
 	display: block;
-	margin: auto;
+	margin-left: auto;
+	margin-right: auto;
+	position: absolute;
+	left: 45%;
+	top: 40%;
 }
 
 @keyframes load {

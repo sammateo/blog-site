@@ -18,8 +18,12 @@ export default function Post1() {
 	const router = useRouter();
 	// console.log(router);
 	const { title } = router.query;
-	const [data, setData] = useState([]);
+	const [data, setData] = useState([
+		{ title: title, body: "", data: "", link: "" },
+	]);
 	const [post, setPost] = useState(info);
+	const [loading, setLoading] = useState(true);
+
 	const getData = () => {
 		fetch("/data.json", {
 			headers: {
@@ -34,9 +38,10 @@ export default function Post1() {
 			.then(function (myJson) {
 				// console.log(myJson);
 				setData(myJson);
-				data.map((info) => {
-					if (info.title == title) {
-						setPost(info);
+				setLoading(false);
+				data.map((dat) => {
+					if (dat.title == title) {
+						setPost(dat);
 					}
 				});
 			});
@@ -51,6 +56,7 @@ export default function Post1() {
 				<title>Post1</title>
 				<link rel="icon" href="/favicon.ico" />
 			</Head>
+
 			{data.map((data1) =>
 				data1.title == title ? (
 					<Post
@@ -59,10 +65,10 @@ export default function Post1() {
 						body={data1.body}
 						date={data1.date}
 						link={data1.link}
+						loading={loading}
 					></Post>
 				) : null
 			)}
-
 			<Button label={"Back to Home"}></Button>
 		</div>
 	);
