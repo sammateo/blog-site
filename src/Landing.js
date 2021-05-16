@@ -11,11 +11,11 @@ export default function Landing({ title }) {
 			exit.parentElement.style.transform = "translateX(0%)";
 			i = 0;
 		}
-		console.log(exit.parentElement);
+		// console.log(exit.parentElement);
 	}
 	return (
 		<div className={styles.container}>
-			<label className={styles.exitlabel} htmlFor="burger">
+			{/* <label className={styles.exitlabel} htmlFor="burger">
 				Menu
 			</label>
 			<input
@@ -24,7 +24,12 @@ export default function Landing({ title }) {
 				name="burger"
 				className={styles.burger}
 				onClick={close}
-			></input>
+			></input> */}
+			<div onClick={close} className={styles.burger}>
+				<div className={styles.bar1}></div>
+				<div className={styles.bar2}></div>
+				<div className={styles.bar3}></div>
+			</div>
 
 			<img src="/pfp.jfif" className={styles.pfp}></img>
 			<h1 className={styles.title}>{title}</h1>
@@ -32,7 +37,7 @@ export default function Landing({ title }) {
 				<p>sophiadvisor@gmail.com</p>
 			</div>
 			<div className={styles.menu}>
-				<label className={styles.exitlabel} htmlFor="exit">
+				{/* <label className={styles.exitlabel} htmlFor="exit">
 					Exit
 				</label>
 				<input
@@ -41,7 +46,13 @@ export default function Landing({ title }) {
 					name="exit"
 					className={styles.exit + " exit"}
 					onClick={close}
-				></input>
+				></input> */}
+
+				<div onClick={close} className={styles.exit + " exit"}>
+					<div className={styles.bar1}></div>
+					<div className={styles.bar2}></div>
+					<div className={styles.bar3}></div>
+				</div>
 				<div className={styles.menuitems}>
 					<Link href="/">
 						<p>Posts</p>
@@ -50,7 +61,9 @@ export default function Landing({ title }) {
 					<Link href="/About">
 						<p>About</p>
 					</Link>
-					<p>Contact</p>
+					<Link href="#footer">
+						<p>Contact</p>
+					</Link>
 				</div>
 			</div>
 		</div>

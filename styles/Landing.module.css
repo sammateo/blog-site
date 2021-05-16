@@ -35,15 +35,41 @@
 
 .burger,
 .exit {
-	position: absolute;
+	/* position: absolute;
 	top: 20px;
 	right: 40px;
-	/* display: grid; */
+
 	background-color: none;
 	height: 20px;
 	width: 30px;
-	transition: 3s ease-in-out;
-	/* display: none; */
+	transition: 3s ease-in-out; */
+	position: absolute;
+	top: 20px;
+	right: 40px;
+	/* width: 35px;
+	height: 5px;
+	background-color: white;
+	margin: 6px 0; */
+}
+
+.bar1,
+.bar2,
+.bar3 {
+	/* position: absolute; */
+	/* top: 20px;
+	right: 40px; */
+	width: 35px;
+	height: 2px;
+	background-color: white;
+	margin: 6px 0;
+}
+
+.bar2 {
+	top: 40px;
+}
+
+.bar3 {
+	top: 60px;
 }
 
 .burger:hover,
@@ -55,7 +81,7 @@
 /* .burger:hover {
 	height: 21px;
 } */
-.burger::before,
+/* .burger::before,
 .exit::before {
 	content: "";
 	display: block;
@@ -67,7 +93,7 @@
 	border-radius: 20px;
 	height: 30px;
 	width: 30px;
-}
+} */
 
 label.burger div {
 	background-color: black;

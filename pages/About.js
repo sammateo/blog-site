@@ -42,14 +42,26 @@ export default function About() {
 			description:
 				"Management Strategy, Finance, Corporate Finance, Strategic Marketing, Project Management, Managing People (HRM) Information Systems Management, Managing Information, Research Methods and Management Decision Making.",
 		},
+		{
+			school: "University of the West Indies, Jamaica",
+			business:
+				"Master of Science (Msc), Natural Resources Management, Distinction",
+			time: "2000 - 2002",
+			description: "Integrated Rural and Urban Environment Management.",
+		},
+		{
+			school: "University of the West Indies, Mona Campus",
+			business:
+				"Bachelor of Science (BS), Zoology and Biochemistry, Distinction",
+			time: "1991 - 1995",
+			description:
+				"Activities and Societies: University and Colleges Christian Fellowship Member and Chorale Director.",
+		},
 	];
 	return (
 		<div className={styles.container}>
 			<Landing title="About Sophia"></Landing>
 			<div className={styles.content}>
-				{/* <div className={styles.title}>
-					<h2>About Sophia</h2>
-				</div> */}
 				<div>
 					<p>Sophia Alecia Bygrave (MBA, BSc, Cert, Trainer TVET)</p>
 
@@ -57,7 +69,7 @@ export default function About() {
 						Author, Trainer, Motivational Speaker/Business and Personal
 						Development Consultant
 					</p>
-					<h3>Experience</h3>
+					<h2>Experience</h2>
 					<div className={styles.experiencecards}>
 						{experience.map((exp) => (
 							<div key={exp.position}>
@@ -70,7 +82,7 @@ export default function About() {
 							</div>
 						))}
 					</div>
-					<h3>Education</h3>
+					<h2>Education</h2>
 					<div className={styles.experiencecards}>
 						{education.map((exp) => (
 							<div key={exp.school}>

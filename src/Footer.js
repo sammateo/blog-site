@@ -9,7 +9,7 @@ export default function Footer() {
 	];
 
 	return (
-		<div className={styles.container}>
+		<div className={styles.container} id="footer">
 			<div className={styles.name}>
 				<h3>{name}</h3>
 				<div>

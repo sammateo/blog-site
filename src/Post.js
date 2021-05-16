@@ -4,7 +4,13 @@ function Post({ title, body, date, link }) {
 	return (
 		<div className={styles.container}>
 			<div className={styles.title}>
-				<Link href={link}>
+				{/* <Link href={link}>
+					<a>
+						<p>{title}</p>
+					</a>
+				</Link> */}
+
+				<Link href="/posts/[title]" as={"/posts/" + title}>
 					<a>
 						<p>{title}</p>
 					</a>
