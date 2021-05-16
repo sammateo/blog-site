@@ -3,7 +3,9 @@ import styles from "../styles/Posts.module.css";
 import { useState, useEffect } from "react";
 
 export default function Posts() {
-	const [info, setInfo] = useState([]);
+	const [info, setInfo] = useState([
+		{ title: "", body: "", data: "", link: "" },
+	]);
 	const [loading, setLoading] = useState(true);
 	async function getData() {
 		let data = await fetch("/data.json", {
